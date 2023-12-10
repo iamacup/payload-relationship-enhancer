@@ -1,7 +1,7 @@
 import path from "path";
 
 // @ts-ignore
-import RelationshipEnhancerPlugin from "../index";
+import RelationshipEnhancerPlugin from "../src/index";
 
 import { webpackBundler } from "@payloadcms/bundler-webpack";
 import { mongooseAdapter } from "@payloadcms/db-mongodb";
@@ -26,12 +26,7 @@ export default buildConfig({
     bundler: webpackBundler(),
   },
   editor: slateEditor({}),
-  collections: [
-    Users,
-    A,
-    B,
-    C,
-  ],
+  collections: [Users, A, B, C],
   localization: {
     locales: [
       {

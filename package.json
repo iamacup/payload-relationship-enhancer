@@ -1,12 +1,12 @@
 {
   "name": "payload-relationship-enhancer",
-  "module": "index.ts",
-  "version": "0.0.2",
+  "version": "0.0.5",
   "type": "module",
+  "main": "src/index.ts",
   "license": "MIT",
   "scripts": {
     "dev": "trap 'pkill -f PAYLOAD-DEV-PROCESS' SIGINT SIGTERM EXIT; { bun --watch ./dev/server.ts --PAYLOAD-DEV-PROCESS & docker run --rm -it -p 27017:27017 mongo > /dev/null & wait; }",
-    "generate:types": "cross-env PAYLOAD_CONFIG_PATH=dev/payload.config.ts payload generate:types"
+    "generate:types": "bunx payload generate:types"
   },
   "devDependencies": {
     "@types/lodash": "^4.14.202",

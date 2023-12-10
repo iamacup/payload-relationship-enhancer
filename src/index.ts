@@ -1,23 +1,21 @@
 import { Config, Plugin } from "payload/config";
-import { getAfterChangeHook } from "./src/bidirectional/bidirectional";
+import { getAfterChangeHook } from "./bidirectional/bidirectional";
 
-import {
-  checkBiDirectionalConfig,
-  enhanceBiDirectionalConfig,
-  getBiDirectionalConfig,
-} from "./src/bidirectional/config";
-import { getRelationalIntegrityConfig } from "./src/relationshipintegrity/config";
-import { getAfterDeleteHook } from "./src/relationshipintegrity/relationshipintegrity";
-import { extractRelationships } from "./src/util";
 import {
   AllRelationships,
   RelationalIntegrityLookups,
   biDirectionalLookups,
-} from "./types";
+} from "../types";
+import {
+  checkBiDirectionalConfig,
+  enhanceBiDirectionalConfig,
+  getBiDirectionalConfig,
+} from "./bidirectional/config";
+import { getRelationalIntegrityConfig } from "./relationshipintegrity/config";
+import { getAfterDeleteHook } from "./relationshipintegrity/relationshipintegrity";
+import { extractRelationships } from "./util";
 
-const RelationshipEnhancerPlugin: Plugin = (
-  incomingConfig: Config
-): Config => {
+const RelationshipEnhancerPlugin: Plugin = (incomingConfig: Config): Config => {
   console.log("Starting Relationship Enhancement Plugin");
 
   if (!incomingConfig.collections) {
