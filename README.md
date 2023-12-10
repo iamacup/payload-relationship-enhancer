@@ -23,6 +23,44 @@ import RelationshipEnhancerPlugin from "payload-relationship-enhancer";
 plugins: [payloadCloud(), RelationshipEnhancerPlugin],
 ```
 
+3. configure it like this:
+
+```
+    {
+      type: "relationship",
+      relationTo: "c",
+      hasMany: true,
+      name: "amixedblocks",
+      custom: {
+        relationshipEnhancer: {
+          relationshipIntegrity: true,
+          biDirectional: [
+            {
+              relationTo: "c", // must match one or more of the things in relationTo
+              path: "cmixedblocks", // this is the path of the field on c that is ALSO a relationship field AND has a biDirectional config pointing back here
+            },
+            ...
+          ],
+        },
+      },
+    },
+```
+
+## Config type is
+
+```
+        {
+          relationshipIntegrity?: boolean,
+          biDirectional?: [
+            {
+              relationTo: string;
+              path: "cmixedblocks": string;
+            },
+            ...
+          ],
+        }
+```
+
 ## Limitations / TODO
 
 * Currently any relationship field nested under an array will be ignored by this plugin, groups and tabs and blocks should be fine.

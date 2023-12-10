@@ -1,5 +1,5 @@
 {
-  "name": "@ek-nexus/payload-enhanced-relationships",
+  "name": "payload-enhanced-relationships",
   "module": "index.ts",
   "version": "0.0.1",
   "type": "module",
