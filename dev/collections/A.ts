@@ -27,6 +27,23 @@ const A: CollectionConfig = {
         },
       },
     },
+    {
+      type: "relationship",
+      relationTo: "c",
+      hasMany: true,
+      name: "amixedblocks2",
+      custom: {
+        relationshipEnhancer: {
+          relationshipIntegrity: true,
+          biDirectional: [
+            {
+              relationTo: "c",
+              path: "cmixedblocks2",
+            },
+          ],
+        },
+      },
+    },
   ],
 };
 
