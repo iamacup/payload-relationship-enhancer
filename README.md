@@ -9,7 +9,7 @@ This is a very early release of a plugin designed to enhance the relationships w
 
 ## A word of warning
 
-This was written by someone who is bad at coding, and until a week ago had never used Mongo or Payload. Performance is probably bad and it might delete all your relationships. 
+This was written by someone who is bad at coding, and until a week ago had never used Mongo or Payload. Performance is probably bad and it might delete all your relationships.
 
 **I am almost certain this will not work properly for everyone and in every case, please leave an issue with details about how your relationships were setup!**
 
@@ -65,17 +65,24 @@ plugins: [payloadCloud(), RelationshipEnhancerPlugin],
 
 ## Limitations / TODO
 
-* Currently any relationship field nested under an array will be ignored by this plugin, groups and tabs and blocks should be fine.
-* Only Mongo is supported as a database, it is very possible to add Postgres.
-* Support for localised relationship fields is not yet there
-* The changes made by this plugin do NOT trigger lifecycle hooks - i.e. if you have a bi-directional relationship between A and B, and set the value in A to some B document, the plugin will update a B document but no update hook will run - this is because we use the mongoose adapter directly and I am not sure exactly how to manually trigger updates.
-* This really needs some tests
-* I don't think the structure of this plugin follows best practice
-* Should add some plugin init config params for profiling performance
-* Better docs
-* The config will let you point two fields on 1 collection to 1 field on another - this breaks stuff. need to sanitise out in config check step
-* Some janky stuff with 'required' relationship fields that needs to be tested out
+- Currently any relationship field nested under an array will be ignored by this plugin, groups and tabs and blocks should be fine.
+- Only Mongo is supported as a database, it is very possible to add Postgres.
+- Support for localised relationship fields is not yet there
+- The changes made by this plugin do NOT trigger lifecycle hooks - i.e. if you have a bi-directional relationship between A and B, and set the value in A to some B document, the plugin will update a B document but no update hook will run - this is because we use the mongoose adapter directly and I am not sure exactly how to manually trigger updates.
+- This really needs some tests
+- I don't think the structure of this plugin follows best practice
+- Should add some plugin init config params for profiling performance
+- Better docs
+- The config will let you point two fields on 1 collection to 1 field on another - this breaks stuff. need to sanitise out in config check step
+- Some janky stuff with 'required' relationship fields that needs to be tested out
 
 ## Contributing
 
 Please do.
+
+## Dev mode
+
+- `bun install`
+- `bun run dev`
+
+Mongo & payload will start - localhost:3000. Payload user is `test@test.com` with password `test`

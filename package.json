@@ -3,15 +3,28 @@
   "module": "index.ts",
   "version": "0.0.1",
   "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "dev": "trap 'pkill -f PAYLOAD-DEV-PROCESS' SIGINT SIGTERM EXIT; { bun --watch ./dev/server.ts --PAYLOAD-DEV-PROCESS & docker run --rm -it -p 27017:27017 mongo > /dev/null & wait; }"
+  },
   "devDependencies": {
     "@types/lodash": "^4.14.202",
     "bun-types": "latest",
-    "payload": "2.1.1"
+    "payload": "2.1.1",
+    "@payloadcms/bundler-webpack": "^1.0.0",
+    "@payloadcms/db-mongodb": "^1.0.0",
+    "@payloadcms/plugin-cloud": "^2.0.0",
+    "@payloadcms/richtext-slate": "^1.0.0",
+    "express": "^4.17.1",
+    "dotenv": "^8.2.0"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
   },
   "dependencies": {
     "lodash": "^4.17.21"
-  }
+  },
+  "trustedDependencies": [
+    "sharp"
+  ]
 }
