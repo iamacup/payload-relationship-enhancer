@@ -73,6 +73,7 @@ plugins: [payloadCloud(), RelationshipEnhancerPlugin],
 * I don't think the structure of this plugin follows best practice
 * Should add some plugin init config params for profiling performance
 * Better docs
+* The config will let you point two fields on 1 collection to 1 field on another - this breaks stuff. need to sanitise out in config check step
 
 ## Contributing
 
