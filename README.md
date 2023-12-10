@@ -9,7 +9,9 @@ This is a very early release of a plugin designed to enhance the relationships w
 
 ## A word of warning
 
-This was written by someone who is bad at coding, and until a week ago had never used Mongo or Payload. Performance is probably bad and it might delete all your relationships.
+This was written by someone who is bad at coding, and until a week ago had never used Mongo or Payload. Performance is probably bad and it might delete all your relationships. 
+
+**I am almost certain this will not work properly for everyone and in every case, please leave an issue with details about how your relationships were setup!**
 
 ## Getting started
 
@@ -70,6 +72,7 @@ plugins: [payloadCloud(), RelationshipEnhancerPlugin],
 * This really needs some tests
 * I don't think the structure of this plugin follows best practice
 * Should add some plugin init config params for profiling performance
+* Better docs
 
 ## Contributing
 
