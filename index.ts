@@ -1,27 +1,3 @@
-// TODO we also need to stop saving trash references from admin panel (i.e. deleted stuff)
-// TODO relationships nested in arrays - can't query local API properly (cant work out how)
-// TODO check all the variations of the relationship type
-// TODO internationalisation
-// TODO something to stop people deleting required fields - i.e. if someone deletes a referenced object that is required, or brings below min rows for many relation? this should sort of work from the transaction but it does NOT!
-// TODO we can probably optimise the logic for creating new ID array for a hasMany reference by limiting the local API depth based on our path so we only get IDs and not objects back
-// TODO deleting multiple things at once in admin UI does not completely work.
-// TODO only supports default ID setup, changes are not supported
-// TODO only supports mongo
-// TODO we probably can only support 1 or the other of bidirectional and integriry - enforce in config
-// TODO we should parse the bi direction config to ensure its valid
-
-// TODO we only let many to many or 1 to 1 in bi-directional - need to enforce or it breaks.
-
-// THE PROBLEM WE HAVE IS - WHEN THE DELETE HOOK RUNS, WE NEED TO PERFORM
-// A DATABASE OPERATION TO REMOVE THE ID FROM THE ARRAY IF IT IS AN ARRAY
-// THIS IS BECAUSE THE DELETE HOOKS RUN ASYNC AND SO WE HAVE UPDATE MISSED HELL
-
-// REMOVE TRANSACTION STUFF, IT WORKS IN SO MUCH AS IT BREAKS STUFF.....
-
-// We need to think about how the actual polymorphic / many thing shakes out
-// (NP) one - one (NP)
-// (P) one - one (P)
-
 import { Config, Plugin } from "payload/config";
 import { getAfterChangeHook } from "./src/bidirectional/bidirectional";
 
