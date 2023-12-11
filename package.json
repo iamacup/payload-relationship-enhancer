@@ -9,6 +9,10 @@
     "generate:types": "payload generate:types",
     "build": "rm -rf dist && tsc"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iamacup/payload-relationship-enhancer.git"
+  },
   "devDependencies": {
     "@payloadcms/bundler-webpack": "^1.0.0",
     "@payloadcms/db-mongodb": "^1.0.0",
