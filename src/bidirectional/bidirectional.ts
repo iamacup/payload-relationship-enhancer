@@ -4,10 +4,10 @@ import type {
   CollectionAfterChangeHook,
   CollectionConfig,
 } from "payload/dist/exports/types";
-import { biDirectionalLookupsPathSpecifics } from "../../types";
+import { biDirectionalLookupsPathSpecifics } from "../types";
 
 import mongoose from "mongoose";
-import { executeBatchQuery } from "../database";
+import { executeBatchQuery } from "../util/database";
 import {
   compareArrays,
   flattenDataToCollection,

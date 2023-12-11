@@ -3,7 +3,7 @@ import {
   FieldAndPath,
   RelationalIntegrityLookups,
   RelationshipEnhancement,
-} from "../../types";
+} from "../types";
 
 const getRelationalIntegrityConfig = (
   relationalIntegrityConfig: RelationalIntegrityLookups,

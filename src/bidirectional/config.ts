@@ -4,7 +4,7 @@ import {
   FieldAndPath,
   RelationshipEnhancement,
   biDirectionalLookups,
-} from "../../types";
+} from "../types";
 
 type ConfigType = {
   relationTo: string;

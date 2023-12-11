@@ -2,9 +2,9 @@ import _isEqual from "lodash/isEqual";
 import {
   biDirectionalLookupsPathSpecifics,
   biDirectionalTarget,
-} from "../../types";
+} from "../types";
 
-import { unsetReferencedIDInCollection } from "../database";
+import { unsetReferencedIDInCollection } from "../util/database";
 
 // TODO i think we need
 // afterCreate - we just blindly sync

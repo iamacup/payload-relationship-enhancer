@@ -2,8 +2,11 @@ import type {
   CollectionAfterDeleteHook,
   CollectionConfig,
 } from "payload/dist/exports/types";
-import { RelationalIntegrityLookupsPathSpecifics } from "../../types";
-import { executeBatchQuery, unsetReferencedIDInCollection } from "../database";
+import { RelationalIntegrityLookupsPathSpecifics } from "../types";
+import {
+  executeBatchQuery,
+  unsetReferencedIDInCollection,
+} from "../util/database";
 
 const getAfterDeleteHook = (
   relationalIntegrity: RelationalIntegrityLookupsPathSpecifics,
