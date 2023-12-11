@@ -1,6 +1,6 @@
 {
   "name": "payload-relationship-enhancer",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "license": "MIT",
@@ -20,10 +20,11 @@
     "cross-env": "^7.0.3",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "payload": "2.1.1"
+    "payload": "^2.0.0"
   },
   "peerDependencies": {
-    "typescript": "^5.0.0"
+    "typescript": "^5.0.0",
+    "payload": "^2.0.0"
   },
   "dependencies": {
     "lodash": "^4.17.21"

@@ -1,7 +1,6 @@
 import path from "path";
 
-// @ts-ignore
-import RelationshipEnhancerPlugin from "../src/index";
+import RelationshipEnhancerPlugin from "../src/";
 
 import { webpackBundler } from "@payloadcms/bundler-webpack";
 import { mongooseAdapter } from "@payloadcms/db-mongodb";
@@ -13,12 +12,6 @@ import A from "./collections/A";
 import B from "./collections/B";
 import C from "./collections/C";
 import Users from "./collections/Users";
-
-import { Config } from "./payload-types";
-
-declare module "payload" {
-  export interface GeneratedTypes extends Config {}
-}
 
 export default buildConfig({
   admin: {
@@ -43,7 +36,6 @@ export default buildConfig({
   },
   typescript: {
     outputFile: path.resolve(__dirname, "payload-types.ts"),
-    declare: false,
   },
   graphQL: {
     schemaOutputFile: path.resolve(__dirname, "generated-schema.graphql"),
