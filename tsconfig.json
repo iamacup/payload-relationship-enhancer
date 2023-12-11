@@ -1,14 +1,16 @@
 {
   "compilerOptions": {
-    "target": "esnext",
+    "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
-    "strict": false,
+    "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "jsx": "react",
-    "moduleResolution": "Bundler",
-    "module": "ESNext",
+    "module": "commonjs",
+    "declaration": true,
+    "declarationDir": "./dist",
+    "outDir": "./dist",
     "paths": {
       "payload/generated-types": ["./dev/payload-types.ts"]
     },
