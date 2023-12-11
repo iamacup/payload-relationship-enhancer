@@ -58,7 +58,7 @@ plugins: [payloadCloud(), RelationshipEnhancerPlugin],
           biDirectional?: [
             {
               relationTo: string;
-              path: "cmixedblocks": string;
+              path: string;
             },
             ...
           ],
