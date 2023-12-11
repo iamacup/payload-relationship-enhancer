@@ -1,13 +1,13 @@
 {
   "name": "payload-relationship-enhancer",
   "version": "0.0.6",
-  "type": "module",
-  "main": "src/index.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "license": "MIT",
   "scripts": {
     "dev": "trap 'pkill -f PAYLOAD-DEV-PROCESS' SIGINT SIGTERM EXIT; { bun --watch ./dev/server.ts --PAYLOAD-DEV-PROCESS & docker run --rm -it -p 27017:27017 mongo > /dev/null & wait; }",
     "generate:types": "payload generate:types",
-    "build": "tsc"
+    "build": "rm -rf dist && tsc"
   },
   "devDependencies": {
     "@payloadcms/bundler-webpack": "^1.0.0",

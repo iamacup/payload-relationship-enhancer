@@ -1,21 +1,17 @@
 {
   "compilerOptions": {
-    "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
+    "target": "es5",
+    "outDir": "./dist",
     "allowJs": true,
-    "strict": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "jsx": "react",
     "module": "commonjs",
+    "sourceMap": true,
+    "jsx": "react",
+    "esModuleInterop": true,
     "declaration": true,
     "declarationDir": "./dist",
-    "outDir": "./dist",
-    "paths": {
-      "payload/generated-types": ["./dev/payload-types.ts"]
-    },
-    "types": ["bun-types"]
+    "skipLibCheck": true,
+    "strict": true
   },
-  "include": ["src", "dev"],
-  "exclude": ["node_modules", "dist", "build"]
+  "include": ["src/**/*"]
 }
