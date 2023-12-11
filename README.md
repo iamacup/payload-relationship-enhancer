@@ -13,6 +13,8 @@ This was written by someone who is bad at coding, and until a week ago had never
 
 **I am almost certain this will not work properly for everyone and in every case, please leave an issue with details about how your relationships were setup!**
 
+[Payload would appear to be considering bi-directional relationships as a core feature](https://discord.com/channels/967097582721572934/1140969904942628874) (although it is not on roadmap) in the future, so this should be seen as a stop-gap for applications prior to its official implementation.
+
 ## Getting started
 
 1. `bun add payload-relationship-enhancer`
