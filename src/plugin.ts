@@ -22,13 +22,14 @@ const RelationshipEnhancerPlugin: Plugin = (incomingConfig: Config): Config => {
     return incomingConfig;
   }
 
-  if (!incomingConfig.db.toString().includes('name: "mongoose"')) {
-    console.error(
-      "Relationship Enhancer currently only supports Mongo/Mongoose, plugin not started!"
-    );
+  // this breaks the plugin from running when running generate:types - need a better check
+  // if (!incomingConfig.db.toString().includes('name: "mongoose"')) {
+  //   console.error(
+  //     "Relationship Enhancer currently only supports Mongo/Mongoose, plugin not started!"
+  //   );
 
-    return incomingConfig;
-  }
+  //   return incomingConfig;
+  // }
 
   // configs
   const relationalIntegrityConfig: RelationalIntegrityLookups = {};
